@@ -1,4 +1,5 @@
 # Miscellaneous
+../.bash_profile
 *.class
 *.log
 *.pyc
