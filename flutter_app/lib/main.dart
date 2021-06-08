@@ -38,25 +38,38 @@ class _BottomNavigationBarHomePageState extends State<BottomNavigationBarHomePag
     Notify(),
     Menu(),
   ];
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Color.fromARGB(220, 221, 187, 255),
+    return DefaultTabController(length: 0, child: Scaffold(
+      backgroundColor: Color.fromARGB(220, 204, 164, 245),
       appBar: AppBar(
           title: Padding(
-            padding: EdgeInsets.only(right: 230),
-            child:Text('Harry', style: TextStyle(fontSize: 18),),
+            padding: EdgeInsets.only(right: 235),
+            child: Text('Harry', style: TextStyle(fontSize: 20),),
           ),
+
           leading: IconButton(
-            icon: Icon(Icons.person, size: 30, ),
-            padding: EdgeInsets.only(left: 20),
-            tooltip: 'save',
-            onPressed : () => debugPrint('hit'),
-          ),
+
+            icon: Container(
+              width: 100,
+              height: 100,
+              child: ClipOval(
+                child: Image.asset('lib/images/harry.jpg',
+                  width: 90,
+                  height: 50,
+                  fit: BoxFit.cover,
+                ),
+              ),
+        ),
+            onPressed: () {
+
+            },
+      ),
           actions: <Widget>[
             IconButton(
               padding: EdgeInsets.only(right: 20),
-              icon: Icon(Icons.add_circle_outline, size: 30, color: Colors.black54,),
+              icon: Icon(Icons.add_circle_outline, size: 30, color: Colors.black38,),
               tooltip: 'Create',
               onPressed: () {
                 Navigator.pushNamed(context, '/TravelPage');
@@ -64,12 +77,12 @@ class _BottomNavigationBarHomePageState extends State<BottomNavigationBarHomePag
             ),
           ],
 
-          backgroundColor: Colors.deepPurple
+          backgroundColor: Color.fromARGB(72, 145, 128, 186)
       ),
       body: pages[index],
 
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: Color.fromARGB(183, 145, 128, 186),
         type: BottomNavigationBarType.fixed,
         currentIndex: index,
         onTap: (int idx) {
@@ -83,29 +96,29 @@ class _BottomNavigationBarHomePageState extends State<BottomNavigationBarHomePag
         selectedItemColor: Colors.white70,
         items: [
           BottomNavigationBarItem(
-            backgroundColor: Colors.deepPurpleAccent,
+            backgroundColor: Color.fromARGB(183, 145, 128, 186),
             icon: Icon(Icons.card_travel_outlined, ), label: 'Journey',
           ),
           BottomNavigationBarItem(
-            backgroundColor: Colors.deepPurpleAccent,
+            backgroundColor: Color.fromARGB(183, 145, 128, 186),
             icon: Icon(Icons.search, ), label: 'Search',
           ),
           BottomNavigationBarItem(
-            backgroundColor: Colors.deepPurpleAccent,
+            backgroundColor: Color.fromARGB(183, 145, 128, 186),
             icon: Icon(Icons.lightbulb, ), label: 'idea',
           ),
           BottomNavigationBarItem(
-            backgroundColor: Colors.deepPurpleAccent,
+            backgroundColor: Color.fromARGB(183, 145, 128, 186),
             icon: Icon(Icons.notifications_on_outlined, ), label: 'Notify',
 
           ),
           BottomNavigationBarItem(
-            backgroundColor: Colors.deepPurpleAccent,
+            backgroundColor: Color.fromARGB(183, 145, 128, 186),
             icon: Icon(Icons.list_outlined, ), label: 'Menu',
           ),
         ],
       ),
-    );
+    ));
   }
 }
 
@@ -139,12 +152,13 @@ class _CreateTravelPageState extends State<CreateTravelPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(220, 204, 164, 245),
       appBar: AppBar(
         title: Padding(
           padding: EdgeInsets.only(right: 90),
           child: Text('Create New Journey'),
         ),
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: Color.fromARGB(72, 145, 128, 186),
         actions: [
           IconButton(
               onPressed: () {
@@ -163,31 +177,31 @@ class _CreateTravelPageState extends State<CreateTravelPage> {
           ),)),*/
 
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: Color.fromARGB(183, 145, 128, 186),
         type: BottomNavigationBarType.fixed,
         currentIndex: currentIndex,
         onTap: OnChangeScreen,
         selectedItemColor: Colors.white70,
         items: [
           BottomNavigationBarItem(
-            backgroundColor: Colors.deepPurpleAccent,
+            backgroundColor: Color.fromARGB(183, 145, 128, 186),
             icon: Icon(Icons.card_travel_outlined, ), label: 'Journey',
           ),
           BottomNavigationBarItem(
-            backgroundColor: Colors.deepPurpleAccent,
+            backgroundColor: Color.fromARGB(183, 145, 128, 186),
             icon: Icon(Icons.search, ), label: 'Search',
           ),
           BottomNavigationBarItem(
-            backgroundColor: Colors.deepPurpleAccent,
+            backgroundColor: Color.fromARGB(183, 145, 128, 186),
             icon: Icon(Icons.lightbulb, ), label: 'idea',
           ),
           BottomNavigationBarItem(
-            backgroundColor: Colors.deepPurpleAccent,
+            backgroundColor: Color.fromARGB(183, 145, 128, 186),
             icon: Icon(Icons.notifications_on_outlined, ), label: 'Notify',
 
           ),
           BottomNavigationBarItem(
-            backgroundColor: Colors.deepPurpleAccent,
+            backgroundColor: Color.fromARGB(183, 145, 128, 186),
             icon: Icon(Icons.list_outlined, ), label: 'Menu',
           ),
         ],
